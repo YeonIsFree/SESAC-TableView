@@ -15,4 +15,7 @@ class CaseThreeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    
+    
 }

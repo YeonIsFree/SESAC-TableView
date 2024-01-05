@@ -31,7 +31,17 @@ class CaseThreeTableViewController: UITableViewController {
         let todo = todoTextfield.text!
         todoList.append(todo)
         tableView.reloadData()
+        todoTextfield.text = ""
+        
+        view.endEditing(true)
     }
+    
+    @IBAction func keyboardDismiss(_ sender: Any) {
+        
+    }
+    
+    
+    
  
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.count
