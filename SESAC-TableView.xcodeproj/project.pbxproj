@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		8C23CE612B4821580026151A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23CE602B4821580026151A /* AppDelegate.swift */; };
 		8C23CE632B4821580026151A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23CE622B4821580026151A /* SceneDelegate.swift */; };
-		8C23CE652B4821580026151A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23CE642B4821580026151A /* ViewController.swift */; };
-		8C23CE682B4821580026151A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C23CE662B4821580026151A /* Main.storyboard */; };
 		8C23CE6A2B4821590026151A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C23CE692B4821590026151A /* Assets.xcassets */; };
 		8C23CE6D2B4821590026151A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C23CE6B2B4821590026151A /* LaunchScreen.storyboard */; };
+		8C23CE752B48218F0026151A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C23CE742B48218F0026151A /* Main.storyboard */; };
+		8C23CE772B4821B20026151A /* CaseTwoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23CE762B4821B20026151A /* CaseTwoTableViewController.swift */; };
+		8C9D3AF52B484FC600A16877 /* CaseThreeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D3AF42B484FC600A16877 /* CaseThreeTableViewController.swift */; };
+		8C9D3AF72B48500E00A16877 /* CaseThreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D3AF62B48500E00A16877 /* CaseThreeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C23CE5D2B4821580026151A /* SESAC-TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SESAC-TableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C23CE602B4821580026151A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C23CE622B4821580026151A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8C23CE642B4821580026151A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C23CE672B4821580026151A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C23CE692B4821590026151A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C23CE6C2B4821590026151A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C23CE6E2B4821590026151A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C23CE742B48218F0026151A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8C23CE762B4821B20026151A /* CaseTwoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseTwoTableViewController.swift; sourceTree = "<group>"; };
+		8C9D3AF42B484FC600A16877 /* CaseThreeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseThreeTableViewController.swift; sourceTree = "<group>"; };
+		8C9D3AF62B48500E00A16877 /* CaseThreeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseThreeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +62,12 @@
 			children = (
 				8C23CE602B4821580026151A /* AppDelegate.swift */,
 				8C23CE622B4821580026151A /* SceneDelegate.swift */,
-				8C23CE642B4821580026151A /* ViewController.swift */,
-				8C23CE662B4821580026151A /* Main.storyboard */,
 				8C23CE692B4821590026151A /* Assets.xcassets */,
 				8C23CE6B2B4821590026151A /* LaunchScreen.storyboard */,
+				8C23CE742B48218F0026151A /* Main.storyboard */,
+				8C23CE762B4821B20026151A /* CaseTwoTableViewController.swift */,
+				8C9D3AF42B484FC600A16877 /* CaseThreeTableViewController.swift */,
+				8C9D3AF62B48500E00A16877 /* CaseThreeTableViewCell.swift */,
 				8C23CE6E2B4821590026151A /* Info.plist */,
 			);
 			path = "SESAC-TableView";
@@ -125,9 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C23CE752B48218F0026151A /* Main.storyboard in Resources */,
 				8C23CE6D2B4821590026151A /* LaunchScreen.storyboard in Resources */,
 				8C23CE6A2B4821590026151A /* Assets.xcassets in Resources */,
-				8C23CE682B4821580026151A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +144,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C23CE652B4821580026151A /* ViewController.swift in Sources */,
+				8C9D3AF52B484FC600A16877 /* CaseThreeTableViewController.swift in Sources */,
+				8C9D3AF72B48500E00A16877 /* CaseThreeTableViewCell.swift in Sources */,
 				8C23CE612B4821580026151A /* AppDelegate.swift in Sources */,
 				8C23CE632B4821580026151A /* SceneDelegate.swift in Sources */,
+				8C23CE772B4821B20026151A /* CaseTwoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8C23CE662B4821580026151A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C23CE672B4821580026151A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8C23CE6B2B4821590026151A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -307,9 +307,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.seryunchun.SESAC-TableView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -335,9 +338,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.seryunchun.SESAC-TableView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
