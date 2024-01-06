@@ -9,7 +9,7 @@ import UIKit
 
 class CaseThreeTableViewController: UITableViewController {
     
-    var todoList = [
+    var todoList: [String] = [
         "제로콜라 구매",
         "다진 마늘 구매",
         "맥북 거치대 알아보기",
@@ -23,26 +23,24 @@ class CaseThreeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setCornerRadius(view: textfieldView)
     }
     
     @IBAction func addButtonTapped(_ sender: UIButton) {
+        // add todoList
         let todo = todoTextfield.text!
         todoList.append(todo)
         tableView.reloadData()
+        
         todoTextfield.text = ""
         
+        // Keyboard Dismiss
         view.endEditing(true)
     }
     
     @IBAction func keyboardDismiss(_ sender: Any) {
-        
     }
-    
-    
-    
- 
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.count
     }

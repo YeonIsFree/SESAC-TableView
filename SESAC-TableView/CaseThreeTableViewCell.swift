@@ -8,14 +8,10 @@
 import UIKit
 
 class CaseThreeTableViewCell: UITableViewCell {
-    
     @IBOutlet var cellView: UIView!
     @IBOutlet var cellLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
-    
-    
 }

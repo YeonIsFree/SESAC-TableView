@@ -9,7 +9,7 @@ import UIKit
 
 class CaseTwoTableViewController: UITableViewController {
     
-    let configList = [
+    let configList: [[String]] = [
         ["공지사항", "실험실", "버전 정보"],
         ["개인/보안", "알림", "채팅", "멀티프로필"],
         ["고객센터/도움말"]
@@ -57,7 +57,6 @@ class CaseTwoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! UITableViewHeaderFooterView
-        
         headerView.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         headerView.textLabel?.textColor = .gray
     }
