@@ -9,6 +9,8 @@ import UIKit
 
 class CaseTwoTableViewController: UITableViewController {
     
+    @IBOutlet var headerTitle: UILabel!
+    
     let configList: [[String]] = [
         ["공지사항", "실험실", "버전 정보"],
         ["개인/보안", "알림", "채팅", "멀티프로필"],
