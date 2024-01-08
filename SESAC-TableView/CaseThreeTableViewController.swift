@@ -7,8 +7,11 @@
 
 import UIKit
 
+struct Constant {
+    static let TAG_WEIGHT = 100000
+}
+
 struct Todo {
-    
     var todo: String
     var checkBox: Bool
     var bookmark: Bool
@@ -71,12 +74,12 @@ class CaseThreeTableViewController: UITableViewController {
         cell.checkBoxButton.setImage(UIImage(systemName: checkBoxButtonImage), for: .normal)
         cell.starButton.setImage(UIImage(systemName: starButtonImage), for: .normal)
         
-        // add checkBox Action (짝수)
-        cell.checkBoxButton.tag = indexPath.row * 2
+        // add checkBox Action
+        cell.checkBoxButton.tag = indexPath.row
         cell.checkBoxButton.addTarget(self, action: #selector(checkBoxButtonTapped), for: .touchUpInside)
         
-        // add starButton Action (홀수)
-        cell.starButton.tag = indexPath.row * 2 + 1
+        // add starButton Action
+        cell.starButton.tag = indexPath.row + Constant.TAG_WEIGHT
         cell.starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
         
         return cell
@@ -87,13 +90,13 @@ class CaseThreeTableViewController: UITableViewController {
     }
     
     @objc func checkBoxButtonTapped(sender: UIButton) {
-        let indexPathRow = sender.tag / 2
+        let indexPathRow = sender.tag
         todoList[indexPathRow].checkBox.toggle()
         tableView.reloadData()
     }
     
     @objc func starButtonTapped(sender: UIButton) {
-        let indexPathRow = (sender.tag - 1) / 2
+        let indexPathRow = sender.tag - Constant.TAG_WEIGHT
         todoList[indexPathRow].bookmark.toggle()
         tableView.reloadData()
     }

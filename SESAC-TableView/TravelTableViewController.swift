@@ -39,16 +39,22 @@ class TravelTableViewController: UITableViewController {
         cell.subtitleLabel.text = magazine.subtitle
         
         // dateLabel - dateformatter
-        let dateString = magazine.date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyMMdd"
-        let convertedDate = dateFormatter.date(from: dateString)
-        
-        let myDateFormatter = DateFormatter()
-        myDateFormatter.dateFormat = "yy년 MM월 dd일"
-        cell.dateLabel.text = myDateFormatter.string(from: convertedDate!)
+        cell.dateLabel.text = DateFormatter.convertedDate(magazine.date)
         
         return cell
     }
+}
 
+extension DateFormatter {
+    static func convertedDate(_ raw: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyMMdd"
+        
+        let convertedDate = dateFormatter.date(from: raw)
+        
+        let myDateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "yy년 MM월 dd일"
+        
+        return myDateFormatter.string(from: convertedDate!)
+    }
 }
