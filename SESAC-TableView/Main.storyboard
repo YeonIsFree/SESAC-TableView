@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Msb-7m-Wcv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jzm-pi-EA8">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -388,6 +388,101 @@
             </objects>
             <point key="canvasLocation" x="1348.854961832061" y="-35.211267605633807"/>
         </scene>
+        <!--Travel Table View Controller-->
+        <scene sceneID="bsZ-6i-vCC">
+            <objects>
+                <tableViewController id="Jzm-pi-EA8" customClass="TravelTableViewController" customModule="SESAC_TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Cai-yx-PFe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SESAC TRAVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mkk-2w-Lj7">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelTableViewCell" rowHeight="507" id="FTZ-Be-UV1" customClass="TravelTableViewCell" customModule="SESAC_TableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="393" height="507"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FTZ-Be-UV1" id="n2f-aH-WFa">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="507"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QOD-Jd-PGO">
+                                            <rect key="frame" x="30" y="10" width="333" height="333"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="QOD-Jd-PGO" secondAttribute="height" id="JuR-9N-d8h"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KC-tU-cRu">
+                                            <rect key="frame" x="30" y="353" width="333" height="72"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="72" id="BKA-xO-dHi"/>
+                                            </constraints>
+                                            <string key="text">2024 NEWS
+해외여행, 이렇게 달라졌다!</string>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qlo-Mw-Xan">
+                                            <rect key="frame" x="30" y="433" width="333" height="53"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알고 준비하는 2024 새 여행" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lup-Ad-IXo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="22.666666666666668"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="zdB-yO-NUc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23년 11월 18일" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dud-It-tVT">
+                                                    <rect key="frame" x="0.0" y="30.666666666666686" width="333" height="22.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="hdd-EP-lPP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QOD-Jd-PGO" firstAttribute="leading" secondItem="n2f-aH-WFa" secondAttribute="leading" constant="30" id="9cJ-NT-zSk"/>
+                                        <constraint firstItem="QOD-Jd-PGO" firstAttribute="top" secondItem="n2f-aH-WFa" secondAttribute="top" constant="10" id="FED-TA-BwO"/>
+                                        <constraint firstItem="2KC-tU-cRu" firstAttribute="leading" secondItem="QOD-Jd-PGO" secondAttribute="leading" id="Ich-Ky-glH"/>
+                                        <constraint firstItem="2KC-tU-cRu" firstAttribute="top" secondItem="QOD-Jd-PGO" secondAttribute="bottom" constant="10" id="RNv-2P-3ba"/>
+                                        <constraint firstItem="qlo-Mw-Xan" firstAttribute="leading" secondItem="2KC-tU-cRu" secondAttribute="leading" id="XZY-dy-KPj"/>
+                                        <constraint firstAttribute="trailing" secondItem="QOD-Jd-PGO" secondAttribute="trailing" constant="30" id="bEN-rv-hLA"/>
+                                        <constraint firstItem="qlo-Mw-Xan" firstAttribute="top" secondItem="2KC-tU-cRu" secondAttribute="bottom" constant="8" symbolic="YES" id="ih4-zP-dAA"/>
+                                        <constraint firstItem="qlo-Mw-Xan" firstAttribute="trailing" secondItem="2KC-tU-cRu" secondAttribute="trailing" id="jH7-hY-Ix2"/>
+                                        <constraint firstItem="2KC-tU-cRu" firstAttribute="trailing" secondItem="QOD-Jd-PGO" secondAttribute="trailing" id="mHn-cl-AF8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="qlo-Mw-Xan" secondAttribute="bottom" constant="10" id="qY2-Yf-BOJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="Dud-It-tVT" id="vKL-nK-Wyd"/>
+                                    <outlet property="mainImageView" destination="QOD-Jd-PGO" id="E3g-e7-RNN"/>
+                                    <outlet property="subtitleLabel" destination="Lup-Ad-IXo" id="hil-Sx-NsZ"/>
+                                    <outlet property="titleLabel" destination="2KC-tU-cRu" id="M5w-lV-mDj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jzm-pi-EA8" id="W5Q-ub-1ut"/>
+                            <outlet property="delegate" destination="Jzm-pi-EA8" id="aSs-23-dzb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1kS-S9-ply" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2122.9007633587785" y="-35.211267605633807"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>
@@ -400,16 +495,16 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
