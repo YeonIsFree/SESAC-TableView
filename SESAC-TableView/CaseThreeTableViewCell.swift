@@ -10,8 +10,6 @@ import UIKit
 class CaseThreeTableViewCell: UITableViewCell {
     @IBOutlet var cellView: UIView!
     @IBOutlet var cellLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    @IBOutlet var checkBoxButton: UIButton!
+    @IBOutlet var starButton: UIButton!
 }

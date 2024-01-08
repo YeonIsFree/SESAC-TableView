@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xi7-Qq-zNf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Msb-7m-Wcv">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -237,7 +237,7 @@
         <scene sceneID="Wat-zl-Nyd">
             <objects>
                 <tableViewController id="Msb-7m-Wcv" customClass="CaseThreeTableViewController" customModule="SESAC_TableView" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="S0G-JW-TpM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="S0G-JW-TpM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -317,13 +317,13 @@
                                             <rect key="frame" x="20" y="2" width="353" height="57"/>
                                             <subviews>
                                                 <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFP-YS-44q">
-                                                    <rect key="frame" x="299" y="21.666666666666668" width="24" height="14.000000000000004"/>
+                                                    <rect key="frame" x="262.33333333333331" y="9" width="70.666666666666686" height="39"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1z-sz-Jwz">
-                                                    <rect key="frame" x="67" y="16.666666666666668" width="232" height="24.000000000000004"/>
+                                                    <rect key="frame" x="90.000000000000014" y="16.666666666666668" width="162.33333333333337" height="24.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="ugQ-Tx-bic"/>
                                                     </constraints>
@@ -332,9 +332,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HK-oD-mZh">
-                                                    <rect key="frame" x="30" y="20" width="17" height="17"/>
+                                                    <rect key="frame" x="20" y="5" width="50" height="47"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="9HK-oD-mZh" secondAttribute="height" multiplier="1:1" id="HfR-ud-EEb"/>
+                                                        <constraint firstAttribute="height" constant="50" id="dmR-zM-EKV"/>
+                                                        <constraint firstAttribute="width" constant="50" id="pYf-eN-7Ab"/>
                                                     </constraints>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
@@ -345,13 +347,13 @@
                                             <constraints>
                                                 <constraint firstItem="LFP-YS-44q" firstAttribute="width" secondItem="9HK-oD-mZh" secondAttribute="width" multiplier="1.41176" id="Ahk-GW-l9O"/>
                                                 <constraint firstItem="A1z-sz-Jwz" firstAttribute="leading" secondItem="9HK-oD-mZh" secondAttribute="trailing" constant="20" id="E7h-XL-t4f"/>
-                                                <constraint firstItem="LFP-YS-44q" firstAttribute="leading" secondItem="A1z-sz-Jwz" secondAttribute="trailing" id="Fdm-iq-uPU"/>
-                                                <constraint firstAttribute="trailing" secondItem="LFP-YS-44q" secondAttribute="trailing" constant="30" id="Xg4-Wa-KWZ"/>
+                                                <constraint firstItem="LFP-YS-44q" firstAttribute="leading" secondItem="A1z-sz-Jwz" secondAttribute="trailing" constant="10" id="Fdm-iq-uPU"/>
+                                                <constraint firstAttribute="trailing" secondItem="LFP-YS-44q" secondAttribute="trailing" constant="20" id="Xg4-Wa-KWZ"/>
                                                 <constraint firstItem="A1z-sz-Jwz" firstAttribute="centerY" secondItem="9HK-oD-mZh" secondAttribute="centerY" id="Y9B-xy-WsN"/>
-                                                <constraint firstItem="9HK-oD-mZh" firstAttribute="leading" secondItem="FBV-Bm-bgn" secondAttribute="leading" constant="30" id="lJG-7Z-qmD"/>
+                                                <constraint firstItem="9HK-oD-mZh" firstAttribute="leading" secondItem="FBV-Bm-bgn" secondAttribute="leading" constant="20" id="lJG-7Z-qmD"/>
                                                 <constraint firstItem="LFP-YS-44q" firstAttribute="height" secondItem="9HK-oD-mZh" secondAttribute="height" multiplier="0.823529" id="sLT-ig-sSG"/>
-                                                <constraint firstItem="9HK-oD-mZh" firstAttribute="top" secondItem="FBV-Bm-bgn" secondAttribute="top" constant="20" id="xRM-il-3V5"/>
-                                                <constraint firstAttribute="bottom" secondItem="9HK-oD-mZh" secondAttribute="bottom" constant="20" id="xz4-GJ-632"/>
+                                                <constraint firstItem="9HK-oD-mZh" firstAttribute="top" secondItem="FBV-Bm-bgn" secondAttribute="top" constant="5" id="xRM-il-3V5"/>
+                                                <constraint firstAttribute="bottom" secondItem="9HK-oD-mZh" secondAttribute="bottom" constant="5" id="xz4-GJ-632"/>
                                                 <constraint firstItem="LFP-YS-44q" firstAttribute="centerY" secondItem="A1z-sz-Jwz" secondAttribute="centerY" id="zeO-hY-CKY"/>
                                             </constraints>
                                         </view>
@@ -366,6 +368,8 @@
                                 <connections>
                                     <outlet property="cellLabel" destination="A1z-sz-Jwz" id="j4x-UQ-j4h"/>
                                     <outlet property="cellView" destination="FBV-Bm-bgn" id="JeT-dZ-KEe"/>
+                                    <outlet property="checkBoxButton" destination="9HK-oD-mZh" id="g7L-nk-1fr"/>
+                                    <outlet property="starButton" destination="LFP-YS-44q" id="RYo-7D-wxW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

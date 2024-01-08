@@ -7,14 +7,26 @@
 
 import UIKit
 
+struct Todo {
+    
+    var todo: String
+    var checkBox: Bool
+    var bookmark: Bool
+    
+    init(todo: String, checkBox: Bool, bookmark: Bool) {
+        self.todo = todo
+        self.checkBox = checkBox
+        self.bookmark = bookmark
+    }
+}
+
 class CaseThreeTableViewController: UITableViewController {
     
-    var todoList: [String] = [
-        "제로콜라 구매",
-        "다진 마늘 구매",
-        "맥북 거치대 알아보기",
-        "무소음 기계식 키보드 알아보기",
-        "운동 등록하기"
+    var todoList: [Todo] = [
+        Todo(todo: "그립톡 구매하기", checkBox: true, bookmark: true),
+        Todo(todo: "사이다 구매", checkBox: false, bookmark: false),
+        Todo(todo: "아이패드 케이스 최저가 알아보기", checkBox: false, bookmark: true),
+        Todo(todo: "양말", checkBox: false, bookmark: true),
     ]
     
     @IBOutlet var textfieldView: UIView!
@@ -28,8 +40,8 @@ class CaseThreeTableViewController: UITableViewController {
     
     @IBAction func addButtonTapped(_ sender: UIButton) {
         // add todoList
-        let todo = todoTextfield.text!
-        todoList.append(todo)
+        let newTodo = Todo(todo: todoTextfield.text!, checkBox: false, bookmark: false)
+        todoList.append(newTodo)
         tableView.reloadData()
         
         todoTextfield.text = ""
@@ -50,8 +62,22 @@ class CaseThreeTableViewController: UITableViewController {
         
         setCornerRadius(view: cell.cellView)
         
-        cell.cellLabel?.text = todoList[indexPath.row]
+        cell.cellLabel?.text = todoList[indexPath.row].todo
         cell.cellLabel?.font = .systemFont(ofSize: 12)
+        
+        // 버튼 이미지 세팅
+        let checkBoxButtonImage = todoList[indexPath.row].checkBox ? "checkmark.square.fill" : "checkmark.square"
+        let starButtonImage = todoList[indexPath.row].bookmark ? "star.fill" : "star"
+        cell.checkBoxButton.setImage(UIImage(systemName: checkBoxButtonImage), for: .normal)
+        cell.starButton.setImage(UIImage(systemName: starButtonImage), for: .normal)
+        
+        // add checkBox Action (짝수)
+        cell.checkBoxButton.tag = indexPath.row * 2
+        cell.checkBoxButton.addTarget(self, action: #selector(checkBoxButtonTapped), for: .touchUpInside)
+        
+        // add starButton Action (홀수)
+        cell.starButton.tag = indexPath.row * 2 + 1
+        cell.starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
         
         return cell
     }
@@ -60,8 +86,31 @@ class CaseThreeTableViewController: UITableViewController {
         return 50
     }
     
+    @objc func checkBoxButtonTapped(sender: UIButton) {
+        let indexPathRow = sender.tag / 2
+        todoList[indexPathRow].checkBox.toggle()
+        tableView.reloadData()
+    }
+    
+    @objc func starButtonTapped(sender: UIButton) {
+        let indexPathRow = (sender.tag - 1) / 2
+        todoList[indexPathRow].bookmark.toggle()
+        tableView.reloadData()
+    }
+    
     func setCornerRadius(view: UIView) {
         view.clipsToBounds = true
         view.layer.cornerRadius = 10
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            todoList.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
     }
 }
