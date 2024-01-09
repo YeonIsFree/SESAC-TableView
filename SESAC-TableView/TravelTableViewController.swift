@@ -52,9 +52,8 @@ extension DateFormatter {
         
         let convertedDate = dateFormatter.date(from: raw)
         
-        let myDateFormatter = DateFormatter()
-        myDateFormatter.dateFormat = "yy년 MM월 dd일"
+        dateFormatter.dateFormat = "yy년 MM월 dd일"
         
-        return myDateFormatter.string(from: convertedDate!)
+        return dateFormatter.string(from: convertedDate!)
     }
 }
